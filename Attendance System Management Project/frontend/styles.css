@@ -1,0 +1,375 @@
+/* =========================
+   🌸 Pleasant Bright Theme
+   ========================= */
+
+/* ---- GLOBAL STYLE ---- */
+:root {
+    --primary: #3b82f6;          /* Blue */
+    --primary-light: #e3f2ff;    /* Light Blue background */
+    --secondary: #22c55e;        /* Green */
+    --accent: #f59e0b;           /* Yellow/Orange */
+    --danger: #ef4444;           /* Red */
+    --text-dark: #1f2937;        /* Dark text */
+    --text-light: #6b7280;       /* Light text */
+    --bg: #ffffff;               /* White */
+    --bg-soft: #f9fafb;          /* Soft light gray */
+    --radius: 14px;              /* Rounded corner */
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--bg-soft);
+    color: var(--text-dark);
+}
+
+/* ----- LOGIN SCREEN ----- */
+.login-main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #e0f2fe, #ffffff);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    background: var(--bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid #e5e7eb;
+}
+
+.login-header .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-icon {
+    background: var(--primary);
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.login-tabs {
+    display: flex;
+    margin: 1.5rem 0;
+    background: var(--primary-light);
+    padding: 0.3rem;
+    border-radius: 50px;
+}
+
+.login-tab-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 0.6rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+    color: var(--text-dark);
+}
+
+.login-tab-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+form input {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: var(--radius);
+    border: 1px solid #d1d5db;
+    background: var(--bg-soft);
+    transition: border 0.2s ease;
+}
+
+form input:focus {
+    border-color: var(--primary);
+    outline: none;
+    background: white;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.hint-text {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* ----- BUTTONS ----- */
+.btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.primary-btn {
+    background: var(--primary);
+    color: white;
+}
+
+.primary-btn:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.secondary-btn {
+    background: var(--secondary);
+    color: white;
+}
+
+.secondary-btn:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.small-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+}
+
+/* ===== APP LAYOUT ===== */
+.app-header {
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.portal-switch {
+    background: var(--primary-light);
+    padding: 0.3rem;
+    border-radius: 50px;
+    display: flex;
+}
+
+.tab-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.tab-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* ===== CONTENT ===== */
+.app-main {
+    padding: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid #e5e7eb;
+    margin-bottom: 2rem;
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    border: 1px solid #d1d5db;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+    gap: 2rem;
+}
+
+/* ===== TABLE ===== */
+.table-wrapper {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table th {
+    background: var(--primary-light);
+    padding: 0.8rem;
+    font-weight: 600;
+}
+
+table td {
+    padding: 0.7rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.status-pill {
+    padding: 0.2rem 0.6rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status-ok {
+    background: var(--secondary);
+    color: white;
+}
+
+.status-low {
+    background: var(--danger);
+    color: white;
+}
+
+/* ===== STUDENT RESULT BOX ===== */
+.result-card {
+    margin-top: 1.5rem;
+    background: var(--bg);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid #e5e7eb;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge-ok {
+    background: var(--secondary);
+    color: white;
+}
+
+.badge-bad {
+    background: var(--danger);
+    color: white;
+}
+
+/* ===== FOOTER ===== */
+.app-footer {
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* ===== UTILITY ===== */
+.hidden {
+    display: none !important;
+}
+
+/* ---- Role selection on login ---- */
+.role-select {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.role-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    color: var(--text-dark);
+}
+
+.role-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 0.3rem;
+}
+
+.light-btn {
+    background: #e5e7eb;
+    color: var(--text-dark);
+}
+
+/* login panel titles */
+.login-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+/* we now use .hidden instead of "active" for login panels */
+.login-panel {
+    margin-top: 0.8rem;
+}
+
+.actions-cell {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.present-btn,
+.absent-btn {
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    border: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.1s ease;
+}
+
+.present-btn {
+    background: #4caf50;
+    color: white;
+}
+
+.absent-btn {
+    background: #ff9800;
+    color: white;
+}
+
+.present-btn:hover,
+.absent-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+    opacity: 0.9;
+}
